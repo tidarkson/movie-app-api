@@ -3,6 +3,7 @@ const app = express()
 const mongoose = require("mongoose")
 const dotenv = require("dotenv")
 dotenv.config()
+const authRoute = require("./routes/auth")
 
 main().catch(err => console.log(err));
 
@@ -13,7 +14,7 @@ async function main() {
 
 
 
-
+app.use("/api/auth", authRoute)
 
 
 app.listen(5000, ()=> {
