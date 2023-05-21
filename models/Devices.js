@@ -8,4 +8,4 @@ const DevicesSchema = new mongoose.Schema({
 
 })
 
-module.export = mongoose.model("Devices", DevicesSchema)
+module.exports = mongoose.model("Devices", DevicesSchema)

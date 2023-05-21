@@ -14,4 +14,4 @@ const BookmarkSchema = new mongoose.Schema({
 
 })
 
-module.export = mongoose.model("Bookmark", BookmarkSchema)
+module.exports = mongoose.model("Bookmark", BookmarkSchema)

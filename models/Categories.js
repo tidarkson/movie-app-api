@@ -13,4 +13,4 @@ const CategorySchema = new mongoose.Schema({
 
 })
 
-module.export = mongoose.model("Category", CategorySchema)
+module.exports = mongoose.model("Category", CategorySchema)

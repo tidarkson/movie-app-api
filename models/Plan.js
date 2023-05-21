@@ -17,4 +17,4 @@ const PlanSchema = new mongoose.Schema({
 
 })
 
-module.export = mongoose.model("Plan", PlanSchema)
+module.exports = mongoose.model("Plan", PlanSchema)

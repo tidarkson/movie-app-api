@@ -18,4 +18,4 @@ const TranscriptSchema = new mongoose.Schema({
 
 })
 
-module.export = mongoose.model("Transcript", TranscriptSchema)
+module.exports = mongoose.model("Transcript", TranscriptSchema)
