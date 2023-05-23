@@ -12,7 +12,7 @@ const movieSchema = new mongoose.Schema({
     },
 
     duration: {
-        type: Number,
+        type: String,
         required: true,
         default: ""
     },
@@ -30,11 +30,12 @@ const movieSchema = new mongoose.Schema({
         type: String
     },
 
-    trailer: {
-        type: String
+    isTrailer: {
+        type: String,
+        default: false
     },
 
-    video: {
+    file: {
         type: String
     },
 

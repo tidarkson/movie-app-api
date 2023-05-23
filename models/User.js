@@ -20,14 +20,9 @@ const userSchema = new mongoose.Schema({
         type: Number
     },
 
-    profilePicture: {
-        type: String,
-        default: ""
-    },
-
     isAdmin: {
         type: Boolean,
-        default: false
+        default: true
     }
 
 })
