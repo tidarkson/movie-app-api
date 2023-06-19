@@ -1,16 +1,16 @@
 const mongoose = require("mongoose")
 
 const BookmarkSchema = new mongoose.Schema({
-    movieId: {
-        type: String,
+    props: {
+        type: mongoose.Schema.Types.Array,
         required: true,
-        unique: true
-    },
+    }, 
     
-    userId: {
-        type: String,
+    owner : {
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
-    }
+        ref : "User"
+    },
 
 })
 

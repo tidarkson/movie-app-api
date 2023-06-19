@@ -1,5 +1,9 @@
 const mongoose = require("mongoose")
 
+mongoose.connect("mongodb://127.0.0.1:27017/movie-app-api", {
+    useNewUrlParser: true,
+})
+
 const movieSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -31,7 +35,7 @@ const movieSchema = new mongoose.Schema({
     },
 
     isTrailer: {
-        type: String,
+        type: Boolean,
         default: false
     },
 
@@ -39,6 +43,13 @@ const movieSchema = new mongoose.Schema({
         type: String
     },
 
+    author: {
+        type: mongoose.Schema.Types.String, 
+        ref: "User"
+    }
+
 })
 
-module.exports = mongoose.model("Movie", movieSchema)
+const Movie = mongoose.model('Movie', movieSchema)
+
+module.exports = Movie
