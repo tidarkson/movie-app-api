@@ -6,10 +6,6 @@ const CategorySchema = new mongoose.Schema({
         unique: true
     },
 
-    id: {
-        type: String,
-        required: true
-    },
     movies : {
         type : mongoose.Schema.Types.ObjectId
     }
