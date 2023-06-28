@@ -10,7 +10,7 @@ const movieSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-
+  
     desc: {
         type: String,
     },
@@ -32,7 +32,7 @@ const movieSchema = new mongoose.Schema({
 
     image: {
         type: String
-    },
+    },    
 
     isTrailer: {
         type: Boolean,

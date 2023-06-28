@@ -3,6 +3,7 @@ const userRouter = require("./src/routes/users")
 const movieRouter = require("./src/routes/movies")
 const bookmarkRouter = require("./src/routes/bookmark")
 const categoryRouter = require("./src/routes/categories")
+const planRouter = require("./src/routes/plan")
 
 
 
@@ -17,6 +18,8 @@ app.use(userRouter)
 app.use(movieRouter)
 app.use(bookmarkRouter)
 app.use(categoryRouter)
+app.use(planRouter)
+
 
  
 
