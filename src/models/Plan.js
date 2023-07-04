@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
 const planSchema = new mongoose.Schema({
-    name : {
+    name: {
         type: String,
         unique: true
     },
@@ -15,9 +15,9 @@ const planSchema = new mongoose.Schema({
         type: String
     },
 
-    devices : {
-        type : mongoose.Schema.Types.ObjectId,
-        required : true,
+    devices: {
+        type: Array,
+        required: true,
         ref: 'Devices'
     }
 })

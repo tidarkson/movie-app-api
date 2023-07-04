@@ -24,7 +24,7 @@ router.post("/plan", auth, async (req, res) => {
 //  READ PLAN 
 
 router.get("/plan/:id", async (req, res) => {
-    const plan = Plan.findById(req.params.id)
+    const plan = await Plan.findById(req.params.id)
     try {
         res.send(plan)
     } catch (err) {
@@ -36,7 +36,7 @@ router.get("/plan/:id", async (req, res) => {
 
 router.patch("/plan/:id", auth, async (req, res) => {
     if (req.user.isAdmin === true) {
-        const plan = Plan.findByIdAndUpdate({ _id: req.params.id }, {
+        const plan = await Plan.findByIdAndUpdate({ _id: req.params.id }, {
             new: true
         })
         try {
@@ -56,7 +56,7 @@ router.patch("/plan/:id", auth, async (req, res) => {
 
 router.delete("/plan/:id", auth, async (req, res) => {
     if (req.user.isAdmin === true) {
-        const plan = Plan.findByIdAndDelete(req.params.id)
+        const plan = await Plan.findByIdAndDelete(req.params.id)
         try {
             res.send(plan)
         } catch (err) {
